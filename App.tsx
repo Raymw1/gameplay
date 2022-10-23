@@ -12,6 +12,7 @@ import * as SplashScreen from 'expo-splash-screen';
 
 import { SignIn } from './src/screens/SignIn';
 import { Background } from './src/components/Background';
+import { Home } from './src/screens/Home';
 
 SplashScreen.preventAutoHideAsync();
 
@@ -33,7 +34,8 @@ export default function App() {
 
   return (
     <Background onLayout={onLayoutRootView}>
-      <SignIn />
+      {/* <SignIn /> */}
+      <Home />
       <StatusBar style='light' translucent />
     </Background>
   );
