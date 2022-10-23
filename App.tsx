@@ -1,5 +1,7 @@
-import { StyleSheet, View } from 'react-native';
+import { useCallback } from 'react';
+
 import { StatusBar } from 'expo-status-bar';
+
 import { useFonts } from 'expo-font';
 import { Inter_400Regular, Inter_500Medium } from '@expo-google-fonts/inter';
 import {
@@ -9,7 +11,7 @@ import {
 import * as SplashScreen from 'expo-splash-screen';
 
 import { SignIn } from './src/screens/SignIn';
-import { useCallback } from 'react';
+import { Background } from './src/components/Background';
 
 SplashScreen.preventAutoHideAsync();
 
@@ -30,15 +32,9 @@ export default function App() {
   if (!fontsLoaded) return null;
 
   return (
-    <View style={styles.container} onLayout={onLayoutRootView}>
+    <Background onLayout={onLayoutRootView}>
       <SignIn />
       <StatusBar style='light' translucent />
-    </View>
+    </Background>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-  },
-});
