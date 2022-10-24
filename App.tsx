@@ -10,9 +10,9 @@ import {
 } from '@expo-google-fonts/rajdhani';
 import * as SplashScreen from 'expo-splash-screen';
 
-import { SignIn } from './src/screens/SignIn';
 import { Background } from './src/components/Background';
-import { Home } from './src/screens/Home';
+import { Routes } from './src/routes';
+import { GestureHandlerRootView } from 'react-native-gesture-handler';
 
 SplashScreen.preventAutoHideAsync();
 
@@ -33,10 +33,11 @@ export default function App() {
   if (!fontsLoaded) return null;
 
   return (
-    <Background onLayout={onLayoutRootView}>
-      {/* <SignIn /> */}
-      <Home />
-      <StatusBar style='light' translucent />
-    </Background>
+    <GestureHandlerRootView style={{ flex: 1 }}>
+      <Background onLayout={onLayoutRootView}>
+        <Routes />
+        <StatusBar style='light' translucent />
+      </Background>
+    </GestureHandlerRootView>
   );
 }

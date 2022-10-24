@@ -4,8 +4,16 @@ import { styles } from './styles';
 
 import illustrationImg from '../../assets/illustration.png';
 import { ButtonIcon } from '../../components/ButtonIcon';
+import { useNavigation } from '@react-navigation/native';
+import { NavigationStackRoutes } from '../../routes/auth.routes';
 
 export function SignIn() {
+  const navigation = useNavigation<NavigationStackRoutes>();
+
+  function handleSignIn() {
+    navigation.navigate('Home');
+  }
+
   return (
     <View style={styles.container}>
       <Image
@@ -20,7 +28,7 @@ export function SignIn() {
         <Text style={styles.subtitle}>
           Form groups to play your favorite{'\n'}games with your friends.
         </Text>
-        <ButtonIcon />
+        <ButtonIcon onPress={handleSignIn} />
       </View>
     </View>
   );
