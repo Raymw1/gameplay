@@ -31,6 +31,6 @@ export const theme = {
   metrics: {
     marginTop: isIphoneX()
       ? getStatusBarHeight() + 26
-      : (StatusBar.currentHeight ?? 0) + 10,
+      : (StatusBar.currentHeight ?? 0) + 16,
   },
 };
