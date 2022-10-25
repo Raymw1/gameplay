@@ -13,4 +13,7 @@ export const styles = StyleSheet.create({
     marginTop: theme.metrics.marginTop,
     marginBottom: 42,
   },
+  content: {
+    marginTop: 42,
+  },
 });
