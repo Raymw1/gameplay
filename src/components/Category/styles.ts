@@ -17,7 +17,7 @@ export const styles = StyleSheet.create({
     borderRadius: 8,
     alignItems: 'center',
     justifyContent: 'space-between',
-    paddingVertical: 7
+    paddingVertical: 7,
   },
   title: {
     fontFamily: theme.fonts.title500,
@@ -41,5 +41,5 @@ export const styles = StyleSheet.create({
     alignSelf: 'flex-end',
     marginRight: 7,
     borderRadius: 3,
-  }
+  },
 });

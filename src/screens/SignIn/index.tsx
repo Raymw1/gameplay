@@ -1,11 +1,11 @@
 import { Image, Text, View } from 'react-native';
-
-import { styles } from './styles';
-
-import illustrationImg from '../../assets/illustration.png';
-import { ButtonIcon } from '../../components/ButtonIcon';
 import { useNavigation } from '@react-navigation/native';
 import { NavigationStackRoutes } from '../../routes/auth.routes';
+
+import { styles } from './styles';
+import illustrationImg from '../../assets/illustration.png';
+
+import { ButtonIcon } from '../../components/ButtonIcon';
 
 export function SignIn() {
   const navigation = useNavigation<NavigationStackRoutes>();
