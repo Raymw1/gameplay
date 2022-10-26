@@ -1,8 +1,7 @@
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import {
-  NativeStackNavigationProp,
-  NativeStackNavigatorProps,
-} from '@react-navigation/native-stack/lib/typescript/src/types';
+import { NativeStackNavigationProp } from '@react-navigation/native-stack/lib/typescript/src/types';
+
+import { theme } from '../global/styles/theme';
 
 import { Home } from '../screens/Home';
 import { SignIn } from '../screens/SignIn';
@@ -22,7 +21,7 @@ export function AuthRoutes() {
     <Navigator
       screenOptions={{
         headerShown: false,
-        contentStyle: { backgroundColor: 'transparent' },
+        contentStyle: { backgroundColor: theme.colors.secondary100 },
       }}
     >
       <Screen name='SignIn' component={SignIn} />

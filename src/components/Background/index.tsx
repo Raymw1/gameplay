@@ -6,7 +6,7 @@ import { styles } from './styles';
 
 type BackgroundProps = {
   children: ReactNode;
-  onLayout: ((event: LayoutChangeEvent) => void) | undefined;
+  onLayout?: ((event: LayoutChangeEvent) => void) | undefined;
 };
 
 export function Background({ children, onLayout }: BackgroundProps) {
