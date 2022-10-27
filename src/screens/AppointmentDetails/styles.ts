@@ -1,5 +1,5 @@
-import { StyleSheet } from "react-native";
-import { theme } from "../../global/styles/theme";
+import { StyleSheet } from 'react-native';
+import { theme } from '../../global/styles/theme';
 
 export const styles = StyleSheet.create({
   container: {
@@ -8,6 +8,7 @@ export const styles = StyleSheet.create({
   banner: {
     width: '100%',
     height: 234,
+    marginBottom: 30,
   },
   bannerContent: {
     flex: 1,
@@ -26,4 +27,8 @@ export const styles = StyleSheet.create({
     color: theme.colors.heading,
     marginTop: 8,
   },
-})
+  members: {
+    marginLeft: 24,
+    marginTop: 24,
+  },
+});
