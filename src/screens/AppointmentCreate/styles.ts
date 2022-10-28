@@ -12,7 +12,7 @@ export const styles = StyleSheet.create({
   },
   form: {
     paddingHorizontal: 24,
-     marginTop: 32,
+    marginTop: 32,
   },
   select: {
     width: '100%',
@@ -59,5 +59,5 @@ export const styles = StyleSheet.create({
   },
   footer: {
     marginVertical: 24,
-  }
+  },
 });

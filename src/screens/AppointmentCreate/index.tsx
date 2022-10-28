@@ -19,12 +19,25 @@ import { GuildIcon } from '../../components/GuildIcon';
 import { SmallInput } from '../../components/SmallInput';
 import { TextArea } from '../../components/TextArea';
 import { Button } from '../../components/Button';
+import { ModalView } from '../../components/ModalView';
+import { Guilds, IGuild } from '../Guilds';
 
 export function AppointmentCreate() {
   const [category, setCategory] = useState('');
+  const [isGuildsModalVisible, setIsGuildsModalVisible] = useState(false);
+  const [guild, setGuild] = useState<IGuild>();
 
   function handleCategorySelect(categoryId: string) {
     categoryId === category ? setCategory('') : setCategory(categoryId);
+  }
+
+  function handleGuildsModal() {
+    setIsGuildsModalVisible(true);
+  }
+
+  function handleGuildSelect(guildSelected: IGuild) {
+    setGuild(guildSelected);
+    setIsGuildsModalVisible(false);
   }
 
   return (
@@ -49,13 +62,14 @@ export function AppointmentCreate() {
             categorySelected={category}
           />
           <View style={styles.form}>
-            <RectButton>
+            <RectButton onPress={handleGuildsModal}>
               <View style={styles.select}>
-                <View style={styles.image} />
-                {/* <GuildIcon /> */}
+                {guild?.icon ? <GuildIcon /> : <View style={styles.image} />}
 
                 <View style={styles.selectBody}>
-                  <Text style={styles.label}>Select a server</Text>
+                  <Text style={styles.label}>
+                    {guild?.name ?? 'Select a guild'}
+                  </Text>
                 </View>
                 <Feather
                   name='chevron-right'
@@ -98,6 +112,9 @@ export function AppointmentCreate() {
           </View>
         </Background>
       </ScrollView>
+      <ModalView visible={isGuildsModalVisible}>
+        <Guilds handleGuildSelect={handleGuildSelect} />
+      </ModalView>
     </KeyboardAvoidingView>
   );
 }
