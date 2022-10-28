@@ -40,6 +40,7 @@ export const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     marginTop: 30,
+    alignItems: 'center',
   },
   column: {
     flexDirection: 'row',
@@ -49,6 +50,11 @@ export const styles = StyleSheet.create({
     marginRight: 4,
     fontSize: 15,
     fontFamily: theme.fonts.text500,
+    color: theme.colors.highlight,
+  },
+  charactersLimit: {
+    fontFamily: theme.fonts.text400,
+    fontSize: 13,
     color: theme.colors.highlight,
   },
 });
