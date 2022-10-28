@@ -4,14 +4,17 @@ import { theme } from '../../global/styles/theme';
 export const styles = StyleSheet.create({
   container: {
     width: '100%',
-    height: 95,
-    backgroundColor: theme.colors.secondary40,
+    height: 56,
+    backgroundColor: theme.colors.primary,
     borderRadius: 8,
-    fontFamily: theme.fonts.text400,
-    fontSize: 13,
-    marginRight: 4,
-    textAlign: 'center',
-    paddingHorizontal: 8,
+    flexDirection: 'row',
+    alignItems: 'center',
+  },
+  title: {
+    flex: 1,
     color: theme.colors.heading,
+    fontSize: 15,
+    textAlign: 'center',
+    fontFamily: theme.fonts.text500,
   },
 });
